@@ -1,0 +1,6 @@
+How to use 
+
+1. Install library -> npm install
+2. Running porject -> npm run dev
+3. Login Admin -> admin | Admin123
+4. Login Student -> valin | Password12345!
