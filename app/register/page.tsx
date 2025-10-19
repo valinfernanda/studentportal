@@ -49,7 +49,7 @@ export default function RegisterPage() {
       const data = await response.json()
 
       if (data.success) {
-        setMessage('Registrasi berhasil! Mengalihkan ke halaman login...')
+        setMessage('“Registration successful! Redirecting to the login page...”')
         setTimeout(() => {
           router.push('/login')
         }, 2000)
@@ -57,11 +57,11 @@ export default function RegisterPage() {
         if (data.errors) {
           setErrors(data.errors)
         } else {
-          setMessage(data.message || 'Registrasi gagal')
+          setMessage(data.message || 'Registration failed')
         }
       }
     } catch (error) {
-      setMessage('Terjadi kesalahan. Silakan coba lagi.')
+      setMessage('An error occurred. Please try again.')
     } finally {
       setLoading(false)
     }
@@ -75,8 +75,8 @@ export default function RegisterPage() {
     <div className='min-h-screen flex'>
       <div className='w-full lg:w-1/2 bg-[#2c2c2c] flex items-center justify-center p-8 overflow-y-auto'>
         <div className='w-full max-w-md py-8'>
-          <h1 className='text-white text-5xl font-bold mb-2'>Daftar</h1>
-          <p className='text-gray-400 text-lg mb-8'>Buat akun mahasiswa Anda</p>
+          <h1 className='text-white text-5xl font-bold mb-2'>Register</h1>
+          <p className='text-gray-400 text-lg mb-8'>Create your student account</p>
 
           <form onSubmit={handleSubmit} className='space-y-4'>
             <FormInput
@@ -85,7 +85,7 @@ export default function RegisterPage() {
               onChange={(e) =>
                 setFormData({ ...formData, student_id: e.target.value })
               }
-              placeholder='NIM (6-10 digit)'
+              placeholder='Student ID number (6-10 digit)'
               required
               error={getFieldError('student_id')}
             />
@@ -96,7 +96,7 @@ export default function RegisterPage() {
               onChange={(e) =>
                 setFormData({ ...formData, name: e.target.value })
               }
-              placeholder='Nama Lengkap'
+              placeholder='Fullname'
               required
             />
 
@@ -118,7 +118,7 @@ export default function RegisterPage() {
                 setFormData({ ...formData, major: e.target.value })
               }
               options={majors}
-              placeholder='Pilih Jurusan'
+              placeholder='Select a major'
             />
 
             <FormInput
@@ -127,7 +127,7 @@ export default function RegisterPage() {
               onChange={(e) =>
                 setFormData({ ...formData, username: e.target.value })
               }
-              placeholder='Nama Pengguna'
+              placeholder='Username'
               required
               error={getFieldError('username')}
             />
@@ -152,7 +152,7 @@ export default function RegisterPage() {
               onChange={(e) =>
                 setFormData({ ...formData, confirm_password: e.target.value })
               }
-              placeholder='Konfirmasi Kata Sandi'
+              placeholder='Confirm Password'
               required
               error={getFieldError('confirm_password')}
             />

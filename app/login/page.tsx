@@ -52,9 +52,9 @@ export default function LoginPage() {
     <div className='min-h-screen flex'>
       <div className='w-full lg:w-1/2 bg-[#2c2c2c] flex items-center justify-center p-8'>
         <div className='w-full max-w-md'>
-          <h1 className='text-white text-5xl font-bold mb-2'>Masuk</h1>
+          <h1 className='text-white text-5xl font-bold mb-2'>Login</h1>
           <p className='text-gray-400 text-lg mb-8'>
-            Masukkan detail akun Anda
+            Input your detail
           </p>
 
           <div className='mb-6'>
@@ -108,7 +108,7 @@ export default function LoginPage() {
 
             <div className='text-left'>
               <a href='#' className='text-white hover:text-purple-400 text-sm'>
-                Lupa Kata Sandi?
+                Forget Password?
               </a>
             </div>
 
@@ -116,18 +116,18 @@ export default function LoginPage() {
 
             <SubmitButton
               isLoading={loading}
-              loadingText='Sedang masuk...'
-              text={`Masuk ${loginMode === 'vulnerable' ? '(Vulnerable)' : ''}`}
+              loadingText='Logging in...'
+              text={`Login ${loginMode === 'vulnerable' ? '(Vulnerable)' : ''}`}
             />
           </form>
 
           <div className='mt-8 text-center'>
-            <span className='text-white'>Belum punya akun? </span>
+            <span className='text-white'>Don’t have an account yet? </span>
             <Link
               href='/register'
               className='text-white font-semibold bg-white/10 hover:bg-white/20 px-6 py-2 rounded-lg inline-block transition-all'
             >
-              Daftar
+              Register
             </Link>
           </div>
         </div>
