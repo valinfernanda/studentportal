@@ -8,9 +8,9 @@ async function seedDatabase() {
     const connection = await mysql.createConnection({
       host: 'sql12.freesqldatabase.com',
       port: 3306,
-      user: 'sql12803031',
-      password: '2ZgaDVhsTU',
-      database: 'sql12803031',
+      user: 'sql12805290',
+      password: 'E7XJ1D5fyY',
+      database: 'sql12805290',
     })
 
     console.log('✅ Connected to database\n')
