@@ -18,9 +18,10 @@ export default function LoginPage() {
   const [loginMode, setLoginMode] = useState<'secure' | 'vulnerable'>('secure')
   const router = useRouter()
 
+  {/* 
   const handleSubmit = async (
     e: React.FormEvent,
-    mode: 'secure' | 'vulnerable' = loginMode
+      mode: 'secure' | 'vulnerable' = loginMode
   ) => {
     e.preventDefault()
     setError('')
@@ -47,6 +48,35 @@ export default function LoginPage() {
       setLoading(false)
     }
   }
+    */}
+
+    const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setError('');
+  setLoading(true);
+
+  try {
+    // SELALU PAKAI ENDPOINT VULNERABLE
+    const response = await fetch('/api/vulnerable/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      router.push('/dashboard');
+    } else {
+      setError(data.message || 'Login gagal');
+    }
+  } catch (error) {
+    setError('Terjadi kesalahan. Silakan coba lagi.');
+  } finally {
+    setLoading(false);
+  }
+}; 
+//baris 53 - 78 itu yg hanya pake vulnerable aja 
 
   return (
     <div className='min-h-screen flex'>
@@ -57,8 +87,10 @@ export default function LoginPage() {
             Input your detail
           </p>
 
+ {/*
           <div className='mb-6'>
             <div className='flex bg-gray-700 rounded-lg p-1'>
+               
               <button
                 type='button'
                 onClick={() => setLoginMode('secure')}
@@ -68,6 +100,9 @@ export default function LoginPage() {
                     : 'text-gray-300 hover:text-white'
                 }`}
               >
+              
+               
+                
                 ✅ Login Secure
               </button>
               <button
@@ -83,6 +118,7 @@ export default function LoginPage() {
               </button>
             </div>
           </div>
+          */}
 
           <form onSubmit={handleSubmit} className='space-y-6'>
             <FormInput
