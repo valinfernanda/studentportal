@@ -235,7 +235,7 @@ export default function AdminDashboard({
     <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
       <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>
         <StatsCard
-          title='Total Mahasiswa'
+          title='Total Students'
           value={data.stats.totalStudents || 0}
           icon={
             <svg
@@ -256,7 +256,7 @@ export default function AdminDashboard({
           bgColor='bg-blue-500/20'
         />
         <StatsCard
-          title='Total Pengguna'
+          title='Total Users'
           value={data.stats.totalUsers || 0}
           icon={
             <svg
@@ -277,7 +277,7 @@ export default function AdminDashboard({
           bgColor='bg-green-500/20'
         />
         <StatsCard
-          title='Total Nilai'
+          title='Total Score'
           value={data.stats.totalGrades || 0}
           icon={
             <svg
@@ -322,16 +322,16 @@ export default function AdminDashboard({
             <thead>
               <tr className='border-b border-white/10'>
                 <th className='text-left text-purple-300 font-semibold py-3 px-4'>
-                  NIM
+                  Student ID Number
                 </th>
                 <th className='text-left text-purple-300 font-semibold py-3 px-4'>
-                  Nama
+                  Name
                 </th>
                 <th className='text-left text-purple-300 font-semibold py-3 px-4'>
                   Email
                 </th>
                 <th className='text-left text-purple-300 font-semibold py-3 px-4'>
-                  Jurusan
+                  Major
                 </th>
               </tr>
             </thead>
@@ -401,22 +401,22 @@ export default function AdminDashboard({
             <thead>
               <tr className='border-b border-white/10'>
                 <th className='text-left text-purple-300 font-semibold py-3 px-4'>
-                  NIM
+                  Student ID Number
                 </th>
                 <th className='text-left text-purple-300 font-semibold py-3 px-4'>
-                  Nama Mahasiswa
+                  Student Name
                 </th>
                 <th className='text-left text-purple-300 font-semibold py-3 px-4'>
-                  Kode Matkul
+                  Course Code
                 </th>
                 <th className='text-left text-purple-300 font-semibold py-3 px-4'>
-                  Mata Kuliah
+                  Subject
                 </th>
                 <th className='text-center text-purple-300 font-semibold py-3 px-4'>
-                  Nilai
+                  Grade
                 </th>
                 <th className='text-center text-purple-300 font-semibold py-3 px-4'>
-                  Aksi
+                  Action
                 </th>
               </tr>
             </thead>

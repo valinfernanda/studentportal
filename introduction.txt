@@ -5,6 +5,11 @@ How to use
 3. Login Admin -> admin | Admin123
 4. Login Student -> valin | Valin123
 
+If DB link already expired : https://www.freesqldatabase.com/
+npm run db:reset
+npm run db:seed
+
+
 vulnerable login : 
 1. admin' OR '1'='1
 Input Password: (anything)

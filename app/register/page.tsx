@@ -166,7 +166,7 @@ export default function RegisterPage() {
 
             <SubmitButton
               isLoading={loading}
-              loadingText='Membuat akun...'
+              loadingText='Creating your account...'
               text='Daftar'
             />
           </form>
