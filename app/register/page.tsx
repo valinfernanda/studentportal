@@ -25,12 +25,12 @@ export default function RegisterPage() {
   const router = useRouter()
 
   const majors = [
-    { value: 'Ilmu Komputer', label: 'Ilmu Komputer' },
-    { value: 'Teknologi Informasi', label: 'Teknologi Informasi' },
-    { value: 'Rekayasa Perangkat Lunak', label: 'Rekayasa Perangkat Lunak' },
-    { value: 'Sistem Informasi', label: 'Sistem Informasi' },
-    { value: 'Sains Data', label: 'Sains Data' },
-    { value: 'Keamanan Siber', label: 'Keamanan Siber' },
+    { value: 'Ilmu Komputer', label: 'Computer Science' },
+    { value: 'Teknologi Informasi', label: 'Information Technology' },
+    { value: 'Rekayasa Perangkat Lunak', label: 'Software Engineering' },
+    { value: 'Sistem Informasi', label: 'Information System' },
+    { value: 'Sains Data', label: 'Data Science' },
+    { value: 'Keamanan Siber', label: 'Cyber Security' },
   ]
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -167,17 +167,17 @@ export default function RegisterPage() {
             <SubmitButton
               isLoading={loading}
               loadingText='Creating your account...'
-              text='Daftar'
+              text='Register'
             />
           </form>
 
           <div className='mt-6 text-center'>
-            <span className='text-white'>Sudah punya akun? </span>
+            <span className='text-white'>Already have an account? </span>
             <Link
               href='/login'
               className='text-white font-semibold bg-white/10 hover:bg-white/20 px-6 py-2 rounded-lg inline-block transition-all'
             >
-              Masuk
+              Log in
             </Link>
           </div>
         </div>

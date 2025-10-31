@@ -127,7 +127,7 @@ export default function LoginPage() {
               onChange={(e) =>
                 setFormData({ ...formData, username: e.target.value })
               }
-              placeholder='Nama Pengguna'
+              placeholder='Username'
               required
             />
 
@@ -138,7 +138,7 @@ export default function LoginPage() {
               onChange={(e) =>
                 setFormData({ ...formData, password: e.target.value })
               }
-              placeholder='Kata Sandi'
+              placeholder='Password'
               required
             />
 

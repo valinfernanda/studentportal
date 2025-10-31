@@ -131,7 +131,7 @@ export default function DashboardPage() {
   }
 
   if (loading) {
-    return <Loader message='Memuat Dashboard...' />
+    return <Loader message='Login...' />
   }
 
   return (

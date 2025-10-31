@@ -61,7 +61,7 @@ export async function POST(request: NextRequest) {
 
     if (password !== confirm_password) {
       return NextResponse.json(
-        { success: false, message: 'Kata sandi tidak cocok' },
+        { success: false, message: 'Incorrect password' },
         { status: 400 }
       )
     }

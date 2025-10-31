@@ -393,7 +393,7 @@ export default function AdminDashboard({
                 d='M12 4v16m8-8H4'
               />
             </svg>
-            Tambah Nilai
+            Add Score
           </button>
         </div>
         <div className='overflow-x-auto'>
